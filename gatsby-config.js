@@ -13,5 +13,6 @@ module.exports = {
         icon: 'src/images/gatsby-icon.png',
       },
     },
+    `gatsby-plugin-styled-components`
   ],
 };
