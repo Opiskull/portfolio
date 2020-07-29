@@ -17,5 +17,11 @@ module.exports = {
       },
     },
     `gatsby-plugin-styled-components`,
+    {
+      resolve: "gatsby-plugin-html-attributes",
+      options: {
+        lang: "en",
+      },
+    },
   ],
 };

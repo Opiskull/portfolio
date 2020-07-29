@@ -4,6 +4,7 @@ export const Global = createGlobalStyle`
     * {
         margin: 0;
         padding: 0;
+        transition: .3s all;
     }
     @media only screen and (max-width: 480px) {
       html {
