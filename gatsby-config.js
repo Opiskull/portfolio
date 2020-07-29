@@ -23,5 +23,18 @@ module.exports = {
         lang: "en",
       },
     },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              rel: "noopener",
+            },
+          },
+        ],
+      },
+    },
   ],
 };

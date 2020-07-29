@@ -24,7 +24,9 @@ export const Project = ({
 }) => {
   return (
     <Wrapper>
-      <Title href={url}>{title}</Title>
+      <Title href={url} rel="noopener">
+        {title}
+      </Title>
       <Description>{description}</Description>
     </Wrapper>
   );
