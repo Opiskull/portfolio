@@ -1,17 +1,13 @@
 import { Project } from "./Project";
 import React from "react";
-import styled from "styled-components";
+import tw, { styled } from "twin.macro";
 
 const List = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  ${tw`flex-wrap flex justify-center`}
 `;
 
-const Title = styled.h1`
-  padding: 1rem;
-  margin: 0 auto;
-  text-align: center;
+const Title = styled.div`
+  ${tw`m-auto p-4 text-center text-2xl`}
 `;
 
 export const Projects = ({ projects }: { projects: any[] }) => {
@@ -23,8 +19,9 @@ export const Projects = ({ projects }: { projects: any[] }) => {
     <div>
       <Title>Projects</Title>
       <List>
-        {projects.map((_) => (
+        {projects.map((_, i) => (
           <Project
+            key={i}
             url={_.url}
             title={_.title}
             description={_.description}

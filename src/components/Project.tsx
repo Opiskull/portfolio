@@ -1,12 +1,16 @@
 import React from "react";
-import styled from "styled-components";
+import tw, { styled } from "twin.macro";
 
 const Wrapper = styled.div`
-  width: 14rem;
-  height: 10rem;
-  box-shadow: 0 0 2rem #888;
-  margin: 1rem;
-  padding: 1rem;
+  ${tw`shadow-2xl p-4 m-4 h-40 w-56`}
+`;
+
+const Title = styled.a`
+  ${tw`text-xl hover:text-orange-500`}
+`;
+
+const Description = styled.div`
+  ${tw`text-sm`}
 `;
 
 export const Project = ({
@@ -20,9 +24,8 @@ export const Project = ({
 }) => {
   return (
     <Wrapper>
-      <h2>{title}</h2>
-      <div>{description}</div>
-      {url ? <a href={url}>Open</a> : ""}
+      <Title href={url}>{title}</Title>
+      <Description>{description}</Description>
     </Wrapper>
   );
 };

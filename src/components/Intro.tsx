@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import tw, { styled } from "twin.macro";
 import {
   LinkedinOutlined,
   GithubOutlined,
@@ -7,30 +7,15 @@ import {
 } from "@ant-design/icons";
 
 const Wrapper = styled.div`
-  margin: 0 auto;
-  width: 20rem;
-  height: 20rem;
-  margin-top: 10%;
-  box-shadow: 0 0 2rem #888;
-  padding: 1rem;
-  font-size: 1.25rem;
-  position: relative;
+  ${tw`shadow-xl p-4 relative text-base w-64 h-56 m-auto mt-4 bg-black text-white`}
 `;
 
 const SocialConnections = styled.div`
-  position: absolute;
-  bottom: 0rem;
+  ${tw`absolute bottom-0 left-0`}
 `;
 
 const SocialConnection = styled.a`
-  display: inline-block;
-  margin: 1rem;
-  font-size: 2rem;
-  outline: none;
-  color: black;
-  &:hover {
-    color: orange;
-  }
+  ${tw`m-4 text-3xl hover:text-orange-500 inline-block`}
 `;
 
 export const Intro = () => {
